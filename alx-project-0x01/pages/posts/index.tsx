@@ -1,5 +1,6 @@
 import React from "react";
 import PostCard from "../../components/common/PostCard";
+import Header from "@/components/layout/Header";
 
 const dummyPosts = [
   { id: 1, title: "Post One", body: "This is the first post." },
@@ -8,6 +9,9 @@ const dummyPosts = [
 
 const PostsPage: React.FC = () => {
   return (
+
+    <>
+    <Header />
     <main className="p-6">
       <h1 className="text-3xl font-bold mb-4">Posts</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -16,6 +20,7 @@ const PostsPage: React.FC = () => {
         ))}
       </div>
     </main>
+    </>
   );
 };
 
